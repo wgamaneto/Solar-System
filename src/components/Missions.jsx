@@ -2,6 +2,7 @@ import React from 'react';
 import Title from './Title';
 import MissionCard from './MissionCard';
 import missions from '../data/missions';
+import PropTypes from 'prop-types';
 
 class Missions extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class Missions extends React.Component {
         {
           missions.map(({ name, year, country, destination }) => (<MissionCard
             key={ name }
+            name={ name }
             year={ year }
             country={ country }
             destination={ destination }
